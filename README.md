@@ -40,6 +40,7 @@ A full stack food delivery web application where users can browse food items, ad
 
 ## 🎯 Features
 
+### 👤 User Side
 - ✅ User Authentication (Sign In & Sign Up)
 - ✅ JWT based secure login system
 - ✅ Browse food items by category
@@ -47,6 +48,13 @@ A full stack food delivery web application where users can browse food items, ad
 - ✅ Payment integration
 - ✅ Order placement system
 - ✅ Fully Responsive design
+
+### 🔧 Admin Panel
+- ✅ Secure Admin Login
+- ✅ Add / Remove food items
+- ✅ Manage all orders
+- ✅ Update order status
+- ✅ Dashboard overview
 
 ---
 
@@ -61,6 +69,12 @@ food-del/
 │   │   ├── context/
 │   │   └── App.jsx
 │   └── package.json
+├── admin/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   └── package.json
 ├── backend/
 │   ├── controllers/
 │   ├── models/
@@ -68,7 +82,6 @@ food-del/
 │   ├── middleware/
 │   └── server.js
 └── README.md
-
 ```
 
 ---
@@ -86,19 +99,27 @@ cd food-del
 cd frontend
 npm install
 
-# 4. Install backend dependencies
+# 4. Install admin dependencies
+cd ../admin
+npm install
+
+# 5. Install backend dependencies
 cd ../backend
 npm install
 
-# 5. Create .env file in backend
+# 6. Create .env file in backend
 MONGODB_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 
-# 6. Run backend
+# 7. Run backend
 npm run server
 
-# 7. Run frontend (new terminal)
+# 8. Run frontend (new terminal)
 cd frontend
+npm run dev
+
+# 9. Run admin (new terminal)
+cd admin
 npm run dev
 ```
 
